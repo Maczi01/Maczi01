@@ -1,0 +1,28 @@
+name: Update Medium Articles
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight UTC every day
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          pip install feedparser
+      - name: Update README
+        run: python update_readme.py
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'Your GitHub Username'
+          git config --global user.email 'your-email@example.com'
+          git add README.md
+          git commit -m "Update README with latest Medium articles" || echo "No changes to commit"
+          git push
