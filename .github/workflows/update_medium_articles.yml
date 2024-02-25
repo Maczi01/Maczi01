@@ -2,7 +2,7 @@ name: Update Medium Articles
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at midnight UTC every day
+    - cron: '30 21 * * *'  # Runs at 21:30 UTC every day
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          python-version: '3.x'
+          node-version: '14'
       - name: Install dependencies
         run: |
-          pip install feedparser
+          npm install rss-parser
       - name: Update README
-        run: python update_readme.py
+        run: node updateReadme.js
       - name: Commit and push if changed
         run: |
           git config --global user.name 'Your GitHub Username'
