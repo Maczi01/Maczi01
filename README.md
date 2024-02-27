@@ -2,8 +2,6 @@
 
 ## My Medium Articles
 <!-- MEDIUM:START -->
-### 📝 My Latest Medium Articles
-
 - [Essential Tools and Extensions for the Modern Frontend Developer](https://medium.com/@mateusz.w.twardy/essential-tools-and-extensions-for-the-modern-frontend-developer-2acc9ddb472d?source=rss-5744960004bb------2)
 - [Simplifying Frontend Testing: Getting Started with Mock Service Worker](https://medium.com/@mateusz.w.twardy/simplifying-frontend-testing-getting-started-with-mock-service-worker-69ab0387efcd?source=rss-5744960004bb------2)
 
