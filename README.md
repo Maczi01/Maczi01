@@ -1,6 +1,5 @@
 ### Hi there 👋
 
-## My Medium Articles
 <!-- MEDIUM:START -->
 ### 📝 My Latest Medium Articles
 
